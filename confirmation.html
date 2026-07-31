@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Booking Confirmed — Senjalan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body data-page="confirmation">
+  <div id="siteHeader"></div>
+  <main class="page container confirmation-page">
+    <section class="confirmation">
+      <div class="checkmark">✓</div>
+      <h1>Booking disahkan!</h1>
+      <p>Terima kasih, <span id="confirmName">Traveller</span>. Booking Confirmation Slip dan resit akan dihantar melalui e-mel.</p>
+      <article class="voucher confirmation-slip">
+        <div class="slip-heading"><div><span class="status">CONFIRMED</span><small>BOOKING CONFIRMATION SLIP</small></div><h2 id="bookingReference">SJL-DEMO</h2></div>
+        <p><b id="voucherTitle">Selected product</b></p>
+        <div class="summary-row"><span>Tarikh &amp; masa</span><b id="voucherDate"></b></div>
+        <div class="summary-row"><span>Kuantiti</span><b id="voucherQty"></b></div>
+        <div class="summary-row"><span>Meeting / pick-up</span><b>Details in confirmation slip</b></div>
+        <div class="summary-row grand"><span>Payment</span><b id="voucherTotal">Paid</b></div>
+      </article>
+      <div class="nav-actions confirmation-actions">
+        <a class="btn btn-green" href="bookings.html">View My Bookings</a>
+        <button class="btn" id="printVoucher" type="button">Print Booking Confirmation Slip</button>
+        <a class="btn" href="index.html">Back to home</a>
+      </div>
+    </section>
+
+    <section class="confirmation-upsell" aria-labelledby="upsellTitle">
+      <div class="section-head destination-head">
+        <div><span class="status">COMPLETE YOUR TRIP</span><h2 id="upsellTitle">Tambah lagi pengalaman untuk perjalanan anda</h2><p>Tour deals dan attraction tickets yang sesuai untuk dinikmati selepas tempahan anda.</p></div>
+        <div class="carousel-controls"><button class="carousel-button" id="upsellPrev" type="button" aria-label="Previous deals">←</button><button class="carousel-button" id="upsellNext" type="button" aria-label="Next deals">→</button></div>
+      </div>
+      <div class="upsell-carousel" id="upsellCarousel" tabindex="0" aria-label="Recommended deals carousel">
+        <article class="upsell-card attraction-deal"><div class="upsell-visual">🎟️<span>COMING SOON</span></div><div class="upsell-copy"><small>ATTRACTION TICKETS</small><h3>Tarikan keluarga pilihan Malaysia</h3><p>Dapatkan berita pelancaran tiket taman tema, muzium dan tarikan tempatan.</p><button class="btn btn-green" type="button" data-coming="Attraction Tickets">Notify me</button></div></article>
+        <article class="upsell-card tour-deal"><div class="upsell-visual">🏝️<span>SAVE 10%</span></div><div class="upsell-copy"><small>LANGKAWI TOUR DEAL</small><h3>Langkawi Island Hopping Adventure</h3><p>Lengkapkan road trip anda dengan pengalaman pulau pilihan traveller.</p><a class="btn btn-primary" href="tour-details.html?id=island-hopping">View deal</a></div></article>
+        <article class="upsell-card tour-deal"><div class="upsell-visual">🚤<span>HOT DEAL</span></div><div class="upsell-copy"><small>NATURE EXPERIENCE</small><h3>Kilim Geoforest Mangrove Boat Tour</h3><p>Terokai bakau, hidupan liar dan landskap unik bersama operator tempatan.</p><a class="btn btn-primary" href="tour-details.html?id=mangrove-tour">View deal</a></div></article>
+        <article class="upsell-card attraction-deal"><div class="upsell-visual">🎡<span>COMING SOON</span></div><div class="upsell-copy"><small>ATTRACTION TICKETS</small><h3>Family attractions &amp; theme parks</h3><p>Simpan minat anda dan terima kemas kini apabila tempahan dibuka.</p><button class="btn btn-green" type="button" data-coming="Attraction Tickets">Notify me</button></div></article>
+        <article class="upsell-card tour-deal"><div class="upsell-visual">🎨<span>SENJALAN PICK</span></div><div class="upsell-copy"><small>LOCAL EXPERIENCE</small><h3>Traditional Batik Workshop</h3><p>Belajar menghasilkan batik bersama pengusaha seni tempatan.</p><a class="btn btn-primary" href="tour-details.html?id=batik-workshop">View deal</a></div></article>
+      </div>
+      <p class="carousel-hint">Swipe atau gunakan butang anak panah untuk melihat semua tawaran.</p>
+    </section>
+  </main>
+  <div id="siteFooter"></div>
+</body>
+</html>

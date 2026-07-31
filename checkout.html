@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Checkout — Senjalan</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body data-page="checkout">
+  <div id="siteHeader"></div>
+  <main class="page container">
+    <div class="breadcrumb"><a href="javascript:history.back()">Product details</a><span>/</span><span>Checkout</span></div>
+    <div class="checkout-steps"><div class="checkout-step done">Pilihan</div><div class="checkout-step current">Maklumat</div><div class="checkout-step">Pembayaran</div><div class="checkout-step">Selesai</div></div>
+    <div class="checkout-layout">
+      <form class="checkout-main" id="checkoutForm">
+        <section class="panel">
+          <h2>Maklumat pelanggan</h2>
+          <div class="form-grid">
+            <div class="form-group"><label for="customerName">Nama penuh</label><input class="form-control" id="customerName" required value="Ahmad Fattah"></div>
+            <div class="form-group"><label for="customerEmail">E-mel</label><input class="form-control" id="customerEmail" type="email" required value="ahmad@example.com"></div>
+            <div class="form-group"><label for="customerPhone">Nombor telefon</label><input class="form-control" id="customerPhone" required value="+60 12-345 6789"></div>
+            <div class="form-group"><label for="customerCountry">Negara</label><select class="form-control" id="customerCountry"><option>Malaysia</option><option>Singapore</option></select></div>
+          </div>
+        </section>
+        <section class="panel" id="checkoutAddons">
+          <h2>Add-ons</h2>
+          <label class="payment-option"><input type="checkbox" data-addon="15" data-name="Hotel pick-up"><span><b>Hotel pick-up</b><br><span class="card-meta">Pengambilan dalam kawasan utama · RM15</span></span></label>
+          <label class="payment-option"><input type="checkbox" data-addon="25" data-name="Meal pack"><span><b>Meal pack</b><br><span class="card-meta">Makanan ringan halal · RM25</span></span></label>
+        </section>
+        <section class="panel">
+          <h2>Pembayaran</h2>
+          <label class="payment-option"><input type="radio" name="payment" checked><span><b>FPX Online Banking</b><br><span class="card-meta">Maybank, CIMB, RHB dan bank Malaysia lain</span></span></label>
+          <label class="payment-option"><input type="radio" name="payment"><span><b>Debit / Credit Card</b><br><span class="card-meta">Visa dan Mastercard</span></span></label>
+          <label class="payment-option"><input type="radio" name="payment"><span><b>DuitNow QR / E-wallet</b><br><span class="card-meta">Bayar menggunakan aplikasi bank</span></span></label>
+          <div class="promo-field">
+            <label for="promoCode">Promo code</label>
+            <div class="promo-control"><input class="form-control" id="promoCode" placeholder="Contoh: JOMSENJALAN"><button class="btn" id="promoButton" type="button">Apply</button></div>
+          </div>
+          <div class="notice checkout-demo-notice">Demo sahaja. Tiada data atau pembayaran akan dihantar.</div>
+          <label class="terms-consent" for="termsAgreement">
+            <input id="termsAgreement" type="checkbox" required>
+            <span>Saya telah membaca dan bersetuju dengan <a href="terms.html" target="_blank" rel="noopener">Terms &amp; Conditions</a> serta polisi pembatalan Senjalan.</span>
+          </label>
+          <button class="btn btn-primary btn-block" id="payButton" type="submit" disabled>Bayar dan sahkan booking</button>
+          <p class="consent-helper" id="consentHelper">Tandakan persetujuan di atas untuk meneruskan pembayaran.</p>
+        </section>
+      </form>
+      <aside class="panel checkout-summary">
+        <h3>Booking summary</h3><b id="summaryTitle">Selected product</b><div class="card-meta" id="summaryDate"></div><div class="card-meta" id="summaryQty"></div>
+        <hr style="border:0;border-top:1px solid var(--line)">
+        <div class="summary-row"><span>Produk</span><span id="summaryBase">RM 0</span></div><div class="summary-row"><span>Add-ons</span><span id="summaryAdd">RM 0</span></div><div class="summary-addon-details" id="summaryAddonDetails"></div><div class="summary-row hidden" id="summaryDepositRow"><span>Refundable deposit</span><span id="summaryDeposit">RM 0</span></div><div class="summary-row"><span>Discount</span><span id="summaryDiscount">- RM 0</span></div><div class="summary-row grand"><b>Total</b><b id="summaryTotal">RM 0</b></div><p class="card-meta">Harga termasuk cukai berkaitan.</p>
+      </aside>
+    </div>
+  </main>
+  <div id="siteFooter"></div>
+</body>
+</html>
